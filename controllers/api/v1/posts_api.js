@@ -11,7 +11,7 @@ exports.index=async (req,res)=>{
     
     });
 
-    // bro list of post is not coming  haveing you logged in to site?//yes//it was coming bit
+    
     
     return res.json(200,{
        message:"list of posts",
@@ -25,7 +25,7 @@ module.exports.destroy = async function(req, res){
         let post = await Post.findById(req.params.id);
         console.log(post);
 
-       // if (post.user == req.user.id){
+       if (post.user == req.user.id){
         //    await Like.deleteMany({likeable:post,onModel:"Post"})
         //    await Like.deleteMany({_id:{$in:post.comments}}  )
            
@@ -39,11 +39,14 @@ module.exports.destroy = async function(req, res){
             return res.json(200,{
                 message:"Successful ,Post and associated comments deleted successfully",
             })
-      //  }else{
+       }else{
         //    req.flash('error', 'You cannot delete this post!');
           //  return res.redirect('back');
-        //} do you have postman???  say something ?yess open it
-
+       
+          return res.json(401,{
+              Message:"You cannot delete this post"
+          })
+    }
     }catch(err){
        // req.flash('error', err);
        console.log("*********************************",err)

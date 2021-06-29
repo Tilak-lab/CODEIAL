@@ -6,9 +6,9 @@ const env=require("../config/enviorment")
 
 //tell passport to use new strategy
 passport.use(new googleStrategy({
-    clientID:env.google_client_id,
-    clientSecret:env.google_client_Secret,
-    callbackURL:env.google_callback_URL,
+    clientID:"231408701604-drt0mmq6dnauqoqhid6psfb423rdtaih.apps.googleusercontent.com",
+    clientSecret:"2Y5VnRoDGTxjnnzvBa8njsF5",
+    callbackURL:"http://localhost:8000/users/auth/google/callback",
 
 
 },(accessToken,refreshToken,profile,done)=>{

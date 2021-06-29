@@ -18,7 +18,7 @@ router.get('/sign-up', usersController.signUp);
 router.get('/sign-in', usersController.signIn);
 router.post('/update1/:id', passport.checkAuthentication, usersController.update1);
 router.post('/create', usersController.create);
-router.get('/profile/:id/toggle_friend',friendship_controller.toggle_friendship);
+router.get ('/profile/:id/toggle_friend',friendship_controller.toggle_friendship);
 // use passport as a middleware to authenticate
 router.post('/create-session', passport.authenticate(
     'local',
@@ -29,8 +29,7 @@ router.post('/create-session', passport.authenticate(
 router.get('/sign-out', usersController.destroySession);
 router.get('/auth/google',passport.authenticate('google',{scope:['profile','email']}))
 router.get('/auth/google/callback',passport.authenticate('google',{failureRedirect:'/users/sign-in'}),usersController.createSession)
-router.get("/auth/facebook",passport.authenticate('facebook'))
-router.get("/auth/facebook/callback",passport.authenticate('facebook',{failureRedirect:'/users/user_sign_up'}),usersController.createSession)
+
 router.get('/auth/github',
   passport.authenticate('github'));
 

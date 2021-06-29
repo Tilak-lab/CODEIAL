@@ -4,7 +4,7 @@ const app = express();
 require("./config/view-helper")(app)
 const port = 8000;
 const logger = require('morgan');
-
+const upload=require("express-fileupload")
 const env=require("./config/enviorment")
 //const passportjwt = require('./config/passport-jwt-strategy');
 const expressLayouts = require('express-ejs-layouts');
@@ -15,7 +15,7 @@ const passport = require('passport');
 const passportLocal = require('./config/passport-local-strategy');
 const passportjwt=require("./config/passport-jwt-strategy")
 const passportGoogle=require("./config/passport-google-oauth2-strategy")
-const passportFacebook=require("./config/facebook")
+
 const passportGithub=require("./config/github")
 const MongoStore = require('connect-mongo')(session);
 const sassMiddleware = require('node-sass-middleware');

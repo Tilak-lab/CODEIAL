@@ -3,7 +3,7 @@ const posts_api=require("../../../controllers/api/v1/posts_api")
 
 const router = express.Router();
 router.get("/",posts_api.index)
-router.get("/:id",posts_api.destroy) /// one mistake here u are using get method instead of delete
+router.delete("/:id",posts_api.destroy) 
 
 
 module.exports=router;

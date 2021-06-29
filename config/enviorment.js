@@ -49,9 +49,7 @@ const production={
             user:process.env.codeial_gmail_user_name,
             pass:process.env.codeial_gmail_password,
         },
-        tls: {
-            rejectUnauthorized: false
-        }
+       
 },
 google_client_id:process.env.CODEIAL_GOOGLE_CLIENT_ID,
 google_client_Secret:process.env.CODEIAL_GOOGLE_CLIENT_SECRET,

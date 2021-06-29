@@ -26,7 +26,7 @@ module.exports.update =async function(req, res) {
                 if(err){
                     console.log("Multer errror",err)
                 }
-                user.name=req.body.name;  /// and here it is user so that's why not taking//okk
+                user.name=req.body.name;  
                 user.email=req.body.email;
                 if(req.file){
                     if(user.avatar)
@@ -36,15 +36,12 @@ module.exports.update =async function(req, res) {
                     user.avatar=User.avatarPath+ '/' +req.file.filename;
                     
                 }
-                // show me  try again
+              
                 
                 user.save()
                 return res.redirect('back');
             })
-            // let users= await  User.findByIdAndUpdate(req.params.id, req.body, function(err, user){
-            //   req.flash('success', 'Updated!');
-            // return res.redirect('back');
-            //  });
+            
         }else{
             req.flash('error', 'Unauthorized!');
             return res.status(401).send('Unauthorized');
@@ -108,6 +105,7 @@ module.exports.create = function(req, res){
 
 // sign in and create a session for the user
 module.exports.createSession = function(req, res){
+     console.log(req.body)
     req.flash('success', 'Logged in Successfully');
     return res.redirect('/');
 }
@@ -133,12 +131,12 @@ module.exports.update1 =async function(req, res){
     
     if(req.user.id == req.params.id){
         try{
-            let user= await  User.findById(req.params.id); /// here u are writing users 
+            let user= await  User.findById(req.params.id); 
             User.uploadedAvatar(req,res,(err)=>{
                 if(err){
                     console.log("Multer errror",err)
                 }
-                user.name=req.body.name;  /// and here it is user so that's why not taking//okk
+                user.name=req.body.name;  
                 user.email=req.body.email;
                 if(req.file){
                     if(user.avatar)
