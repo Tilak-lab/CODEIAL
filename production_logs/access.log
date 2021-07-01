@@ -186,3 +186,9 @@
 [0mGET /users/sign-in [32m200[0m 46.243 ms - 3752[0m
 [0mGET /users/auth/github [36m302[0m 21.852 ms - 0[0m
 [0mGET /users/auth/github/callback?code=6264e6ae0886164395bf [0m-[0m - ms - -[0m
+[0mGET / [32m200[0m 76.778 ms - 11863[0m
+[0mGET /users/sign-in [36m304[0m 10.858 ms - -[0m
+[0mGET /users/auth/google [36m302[0m 6.589 ms - 0[0m
+[0mGET /users/auth/google/callback?code=4%2F0AX4XfWhkCBsp-zDYpIyRh6wr2zHmTJabW-0ifAe6kOu_8S3j692jlEemWlLXbHw04ZGbYw&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=2&prompt=consent [36m302[0m 12257.074 ms - 46[0m
+[0mGET / [32m200[0m 29.037 ms - 18826[0m
+[0mGET / [32m200[0m 55.490 ms - 18535[0m
