@@ -183,3 +183,6 @@
 [0mGET / [32m200[0m 99.573 ms - 12152[0m
 [0mGET /users/sign-in [36m304[0m 20.448 ms - -[0m
 [0mGET /users/sign-in [32m200[0m 43.247 ms - 3741[0m
+[0mGET /users/sign-in [32m200[0m 46.243 ms - 3752[0m
+[0mGET /users/auth/github [36m302[0m 21.852 ms - 0[0m
+[0mGET /users/auth/github/callback?code=6264e6ae0886164395bf [0m-[0m - ms - -[0m
