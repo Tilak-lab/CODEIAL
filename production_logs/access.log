@@ -172,3 +172,14 @@
 [0mGET /users/auth/google [36m302[0m 12.626 ms - 0[0m
 [0mGET /users/auth/google/callback?code=4%2F0AX4XfWifbInODrYqfj0DVdTWxorN71AF3ZAxFxOoSlNWuZUjZp6b_H5AOAKOgDRkwEAWFQ&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=0&prompt=consent [36m302[0m 1571.308 ms - 46[0m
 [0mGET / [32m200[0m 114.775 ms - 18555[0m
+[0mGET / [32m200[0m 214.337 ms - 11863[0m
+[0mGET /favicon.ico [33m404[0m 17.992 ms - 150[0m
+[0mGET /users/sign-in [32m200[0m 22.086 ms - 3752[0m
+[0mGET /users/auth/google [36m302[0m 17.400 ms - 0[0m
+[0mGET /users/auth/google/callback?code=4%2F0AX4XfWg_xCYAFPMEo63pSPsyhE2ghqKvvXMSQAHIOakCyclrjhSgXJhUmcR5ZTcF76DfRg&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=2&prompt=consent [36m302[0m 3002.057 ms - 46[0m
+[0mGET / [32m200[0m 83.468 ms - 18826[0m
+[0mGET /posts/destroy/60c8e41f12e1fd56ace94962 [33m401[0m 62.408 ms - -[0m
+[0mGET /users/sign-out [36m302[0m 31.230 ms - 46[0m
+[0mGET / [32m200[0m 99.573 ms - 12152[0m
+[0mGET /users/sign-in [36m304[0m 20.448 ms - -[0m
+[0mGET /users/sign-in [32m200[0m 43.247 ms - 3741[0m
