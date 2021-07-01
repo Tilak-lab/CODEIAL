@@ -35,5 +35,6 @@ router.get('/auth/github',
 
 router.get('/auth/github/callback', 
   passport.authenticate('github', { failureRedirect: '/users/user_sign_up' }),usersController.createSession),
-
+router.get('/auth/facebook',passport.authenticate('facebook'))
+router.get('/auth/facebook/callback',passport.authenticate('facebook',{failureRedirect:'/users/sign-in'}),usersController.createSession)
 module.exports = router;

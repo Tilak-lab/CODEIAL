@@ -32,7 +32,7 @@ module.exports.destroy = async function(req, res){
 
     try{
         let post = await Post.findById(req.params.id);
-
+         //.id means converting the object id into string 
         if (post.user == req.user.id){
            await Like.deleteMany({likeable:post,onModel:"Post"})
            await Like.deleteMany({_id:{$in:post.comments}}  )
