@@ -1,5 +1,6 @@
 body {
-    background: #F5F7FA
+    background: #F5F7FA,
+  
   }
   
   .stat-val {
@@ -41,11 +42,13 @@ body {
     display: block;
     outline: none;
     border-bottom: 2px solid black;
-    font-size: medium;
+    font: size 10px;;
     letter-spacing: 2px;
     line-height: normal;
     margin: 12px;
     background-color: #F1F1F1;
+    font-family:'Poppins',sans-serif ;
+    box-shadow: 0 5px 30px rgba(22,89,233);
   }
   #cover {
     background: #222 url('https://unsplash.it/1920/1080/?random') center center no-repeat;
@@ -87,7 +90,8 @@ form:before {
   object-fit: cover;
   cursor: pointer;
   filter: drop-shadow(0 1.2rem 3rem 0.5rem rgba(0,0,0,0.4));
-
+  max-width: 200px;
+  padding: 20px;
 }
 .pop{
   width: 20rem;

@@ -6,7 +6,7 @@ const AVATAR_PATH=path.join('/uploads/users/avatars')
 const userSchema = new mongoose.Schema({
     email: {
         type: String,
-        required: true,
+   
         unique: true
     },
     password: {
@@ -20,7 +20,7 @@ const userSchema = new mongoose.Schema({
   
     name: {
         type: String,
-        required: true
+       
     },
     avatar:{
         type:String,

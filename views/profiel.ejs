@@ -13,8 +13,9 @@
         <div class="row align-items-center-pop">
             <div class="col-sm-8 offset-sm-2">
                           <div class="container" > 
-                                <div class="c1">
-                                <img src="<%= user.avatar  %> " id="myModel"  alt="<%= user.name  %> " >
+                              
+                            <div class="c1">
+                                <img class="profile_image" src="<%= user.avatar  %> " id="myModel"  alt="<%= user.name  %> " >
                                 </div>
                             
                           </div>
@@ -27,9 +28,8 @@
                    <div class="lol">
                     <form action="/users/update/<%=user._id%>" enctype="multipart/form-data" method="POST">
                     
-                    <input type="text" name="name" placeholder="Your Name" value="" >
-                        <input type="email" name="email" placeholder="Your Email" value="">
-                        <input type="file" name="avatar" placeholder="Profile Picture">
+                    
+                        <input type="file" name="avatar" placeholder="Profile Picture" >
                         <input type="submit"  value="Update">
                         <% } %> 
                         

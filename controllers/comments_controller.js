@@ -19,10 +19,11 @@ module.exports.create = async function(req, res){
             post.comments.push(comment);
             post.save();
 
+            comment = await comment.populate('user', 'name email').execPopulate();
+            commentsMailer.newComment(comment);
+
             if (req.xhr){
                 // Similar for comments to fetch the user's id!
-                comment = await comment.populate('user', 'name').execPopulate();
-    
                 return res.status(200).json({
                     data: {
                         comment: comment
