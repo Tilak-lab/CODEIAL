@@ -9,11 +9,11 @@ let transporter=nodemailer.createTransport(env.smtp)
 let renderTemplate=(data,relativePath)=>{
     let mailHTML;
     ejs.renderFile(
-        path.join(__dirname,'../views/mailers',relativePath),
+        path.join(__dirname,'../views/mailer',relativePath),
         data,
         function(err,template){
          if(err){
-             console.log("ERROR in mailing")
+             console.log("ERROR in mailing",err)
              return
          
             }
