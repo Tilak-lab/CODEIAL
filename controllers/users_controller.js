@@ -21,20 +21,24 @@ module.exports.profile = function(req, res){
 module.exports.update =async function(req, res) {
     try{
         if(req.user.id == req.params.id){
-            let user= await  User.findById(req.params.id); /// here u are writing users 
+            let user= await  User.findById(req.params.id); 
             User.uploadedAvatar(req,res,(err)=>{
                 if(err){
                     console.log("Multer errror",err)
                 }
-                user.name=req.body.name;  
-                user.email=req.body.email;
+                console.log(req.file)
+                // user.name=req.body.name;  
+                // user.email=req.body.email;
                 if(req.file){
                     if(user.avatar)
                     {
-                        fs.unlinkSync(path.join(__dirname,'..',user.avatar));
+                       // fs.unlinkSync(path.join(__dirname,'..',user.avatar));
+                       user.avatar=User.avatarPath+ '/' +req.file.filename;
                     }
-                    user.avatar=User.avatarPath+ '/' +req.file.filename;
+                    //  fs.unlinkSync(path.join(__dirname,'..',user.avatar));
                     
+                    // user.save()
+                    // return res.redirect('back');
                 }
               
                 
