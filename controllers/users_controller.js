@@ -36,9 +36,7 @@ module.exports.update =async function(req, res) {
                        user.avatar=User.avatarPath+ '/' +req.file.filename;
                     }
                     //  fs.unlinkSync(path.join(__dirname,'..',user.avatar));
-                    
-                    // user.save()
-                    // return res.redirect('back');
+                  
                 }
               
                 
